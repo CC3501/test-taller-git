@@ -51,7 +51,7 @@ if __name__ == "__main__":
         np.array([0, 0, 1])
     )
 
-    tpose = Tpose()
+    tpose = Tpose('img/ricardo.png')
     axis = Axis()
 
     # Definimos las referencias cruzadas
