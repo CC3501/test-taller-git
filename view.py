@@ -51,7 +51,7 @@ if __name__ == "__main__":
         np.array([0, 0, 1])
     )
 
-    tpose = Tpose('img/mememan.png')
+    tpose = Tpose('img/ricardo.png')
     axis = Axis()
 
     # Definimos las referencias cruzadas
@@ -64,8 +64,8 @@ if __name__ == "__main__":
         # Clearing the screen in both, color and depth
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 
-        axis.draw(colorShaderProgram, projection, view)
         tpose.draw(colorShaderProgram, textureShaderProgram, projection, view)
+        axis.draw(colorShaderProgram, projection, view)
 
         # Once the drawing is rendered, buffers are swap so an uncomplete drawing is never seen.
         glfw.swap_buffers(window)
